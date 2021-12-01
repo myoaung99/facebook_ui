@@ -9,9 +9,22 @@
     --semi-danger : #f3425f;
     --success : #45bd62;
     --warning : #f7b928;
-    --text : #d6d8dc;
+    --text : #dcdcdc;
     --light: #ffffff;
 }
+
+::placeholder {
+    color: #dcdcdc;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: red;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: red;
+  }
 
 
 * {
@@ -57,6 +70,7 @@ body{
     padding: 10px 15px;
     display: flex; 
     align-items: center;
+    
 }
 
 .search-box .feather-search{
@@ -68,6 +82,8 @@ body{
     color: var(--text);
     background-color: var(--soft-dark);
     border: none;
+    font-weight: lighter;
+
 }
 
 .search-input:focus-visible{
@@ -189,27 +205,35 @@ body{
 }
 
 .left-aside{
-    width: 25%;
+    width: 30%;
+    
 }
 
 .news-feed{
-    width: 50%;
+    width: 40%;
+    position: relative;
 }
 
 .myday-list{
     width: 100%;
     margin-top: 20px;
     display: flex;
-    justify-content: center;
+    /* overflow-x: scroll; */
+    justify-content: space-between;
+}
+
+.myday-item{
+    width: 110px;
+    margin-right: 10px;
 }
 
 .myday-list-box{
-    width: 120px;
+    width: 100%;
     height: 200px;
     overflow: hidden;
     position: relative;
     
-    background-size: 100%;
+    background-size: 150%;
     background-position: center;
     background-repeat: no-repeat;
     background-color: var(--text);
@@ -228,6 +252,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.scroll-myday{
+    width: 50px;
+    height: 50px;
+    background-color: var(--soft-dark);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 98px;
+    right: -19px;
+    z-index: 2;
 }
 
 .first{
@@ -267,11 +306,104 @@ body{
     color: var(--light);
 }
 
-.add-post{}
+
+.add-post{
+    width: 100%; 
+    background-color: var(--semi-dark);
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.add-post-box{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.add-post-top{
+    display: flex;
+    padding: 20px 10px;
+}
+
+.add-post-pic{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.add-post-input-box{
+    width: 100%;
+ 
+    background-color: var(--soft-dark);
+    color: var(--text);
+    border-radius: 30px;
+}
+
+.add-post-input{
+    background-color: var(--soft-dark);
+    border: none;
+    width: 80%;
+    height: 100%;
+    border-radius: 30px;
+    padding-left: 30px;
+    font-size: 1.1em;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+.add-post-input:focus-visible{
+    outline: none;
+}
+
+hr{
+    margin: 0 auto;
+    width: 100%;
+    border: none;
+    border-top: 1px solid var(--soft-dark);
+}
+
+.add-post-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.add-post-bottom-left, .add-post-bottom-center, .add-post-bottom-right{
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px 0px;
+}
+
+.add-post-bottom div:hover{
+    background-color: var(--soft-dark);
+    cursor: pointer;
+}
+
+.add-post-icon{
+    margin-right: 10px;
+}
+
+.feather-video{
+    color: var(--danger);
+}
+
+.feather-image{
+    color: var(--success);
+}
+
+.feather-github{
+    color: var(--warning);
+}
+
 
 .post-list{}
 
 
 .chat-box{
-    width: 25%;
+    width: 30%;
+
 }
